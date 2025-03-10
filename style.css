@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F4F4F4;
+    color: #000000; /* Text color */
+    font-size: 16px;
+}
+
+.background-image {
+   background-image: url('banglorecityimage.webp');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+
+
+.bg-image {
+    background-image: url('IMG_.jpg');
+     background-size: cover;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     opacity: 0.7; /* Adjust the opacity as needed */
+ }
+ 
+
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+.recommendations {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    width: calc(100% - 40px); /* Adjusted width to fit within viewport */
+    justify-content: flex-start; /* Align boxes to the left */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+
+/* Style for the recommendation box */
+.propertyrecommendationsheader{
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add this CSS for loading overlay */
+.loading-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.input-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 10px 0; /* Margin */
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FF5733; /* Vibrant button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #FF834A; /* Brighter color on hover */
+}
+
+#result {
+    color:#000000;
+    font-weight: bold;
+    margin: 20px 0;
+}

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>House Price Prediction by MAS</h1>
+        <div class="input-container">
+            <label for="bedrooms">Bedrooms:</label>
+            <input type="number" id="bedrooms">
+        </div>
+        <div class="input-container">
+            <label for="bathrooms">Bathrooms:</label>
+            <input type="number" id="bathrooms">
+        </div>
+        <div class="input-container">
+            <label for="sqft">Square Footage:</label>
+            <input type="number" id="sqft">
+        </div>
+        <div class="input-container">
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="Downtown">Downtown</option>
+                <option value="Suburb">Suburb</option>
+                <option value="Rural">Rural</option>
+                <option value="Uptown">Uptown</option>
+                <option value="Midtown">Midtown</option>
+                <option value="Upper East Side">Upper East Side</option>
+                <option value="Lower East Side">Lower East Side</option>
+                <option value="Whitefield">Whitefield</option>
+                <option value="Electronic City">Electronic City</option>
+                <option value="Domlur">Domlur</option>
+                <option value="Rajajinagar">Rajajinagar</option>
+                <option value="Sadashivanagar">Sadashivanagar</option>
+                <option value="Ulsoor">Ulsoor</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="age">Age of the House:</label>
+            <input type="number" id="age">
+        
+        </div>
+        <button id="predict-btn">Predict Price</button>
+        <div id="error-message" style="color: red;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

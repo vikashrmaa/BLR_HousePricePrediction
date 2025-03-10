@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Price</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-color: white;"> <!-- Set background color to white -->
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+        <p>Predicting Price...</p>
+    </div>
+
+    <div class="bg-image"></div> <!-- Background image div -->
+    
+
+
+    <div class="container" id="contentContainer" style="display: none;">
+        <div>
+            <h1>Predicted Price</h1>
+            <p id="result"></p>
+            <button id="go-back-btn">Go Back</button>
+
+            <div class="recommendation-header">
+                <p style="font-weight: bold; color: black; text-align: center;">Property Listing Websites:</p>
+            </div>
+
+            <div class="recommendations">
+                <!-- Your recommendation boxes here -->
+                <div class="recommendations">
+                    <!-- Box 1 -->
+                    <div class="box">
+                        <!-- Image 1 -->
+                        <div style="margin-bottom: 10px;">
+                            <img src="99acres.png" alt="Image Description" style="max-width: 100%; height: auto;">
+                        </div>
+                        <!-- Link 1 -->
+                        <ul class="link-list">
+                            <li><a href="https://www.99acres.com" target="_blank" style="text-decoration: none; color: #000;">99acres.com</a></li>
+                        </ul>
+                    </div>
+                
+                    <!-- Box 2 -->
+                    <div class="box">
+                        <!-- Image 2 -->
+                        <div style="margin-bottom: 10px;">
+                            <img src="no broker.jpeg" alt="Image Description" style="max-width: 100%; height: auto;">
+                        </div>
+                        <!-- Link 2 -->
+                        <ul class="link-list">
+                            <li><a href="https://www.nobroker.in" target="_blank" style="text-decoration: none; color: #000;">nobroker.com</a></li>
+                        </ul>
+                    </div>
+                
+                    <!-- Box 3 -->
+                    <div class="box">
+                        <!-- Image 3 -->
+                        <div style="margin-bottom: 10px;">
+                            <img src="housing.com.png" alt="Image Description" style="max-width: 100%; height: auto;">
+                        </div>
+                        <!-- Link 3 -->
+                        <ul class="link-list">
+                            <li><a href="https://housing.com" target="_blank" style="text-decoration: none; color: #000;">housing.com</a></li>
+                        </ul>
+                    </div>
+                
+                    <!-- Box 4 -->
+                    <div class="box">
+                        <!-- Image 4 -->
+                        <div style="margin-bottom: 10px;">
+                            <img src="magic bricks.png" alt="Image Description" style="max-width: 100%; height: auto;">
+                        </div>
+                        <!-- Link 4 -->
+                        <ul class="link-list">
+                            <li><a href="https://www.magicbricks.com" target="_blank" style="text-decoration: none; color: #000;">magicbricks.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to hide the loading overlay and display the content
+        function showContent() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+            document.getElementById('contentContainer').style.display = 'block';
+        }
+
+        // Simulate loading time (1.5seconds), then show content
+        setTimeout(showContent, 1500);
+
+        // Retrieve the predicted price from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const predictedPrice = urlParams.get('predictedPrice');
+
+        // Function to display the predicted price
+        function showResult() {
+            document.getElementById('result').textContent = `Predicted Price: ₹${predictedPrice}`;
+        }
+
+        // Call function to show result (you can replace this with actual prediction process)
+        showResult();
+
+        // Add event listener to the "Go Back" button
+        document.getElementById('go-back-btn').addEventListener('click', function() {
+            // Navigate back to the main menu page
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
+
+        
+
+
+
+        
